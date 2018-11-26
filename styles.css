@@ -37,7 +37,7 @@ html, body{
     width: 150px;
     border-radius: 20px;
     background-color: orange;
-    position: absolute;
+    position: fixed;
     bottom: 10px;
     left: calc(50% - 75px);
     justify-content: space-between;
@@ -80,13 +80,14 @@ html, body{
 }
 
 .button1{
-    font-size: 40px;
+    font-size: 22px;
     font-weight: 900;
-    background-color: transparent;
-    height: 100%;
-    width: 50%;
+    height: 40px;
+    width: 75px;
+    text-align: center;
     justify-content: center;
     align-items: center;
+    padding-bottom: 10px;
 }
 
 .hidden{

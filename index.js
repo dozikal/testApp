@@ -27,21 +27,16 @@ getNews = (callback) => {
 refreshPage = (index) => {
 
     console.log('Gate 1');
-    var temp = newsItems.splice(itemsPerPage * (index - 1), itemsPerPage);
-    var temp3 = [];
+    var subArray = newsItems.splice(itemsPerPage * (index - 1), itemsPerPage);
+    var temp = '';
 
-    for (i = 0; i < temp.length; i++) {
-        console.log('Gate 2', temp.length);
-        var temp2 = document.getElementById("listItemTemplate").cloneNode(true);
-        temp2.classList.remove('hidden');
-        temp2.childNodes[1].src = temp[i].avatar;
-        console.log(temp2.childNodes[2].c);
-        //temp2.childNodes[1].childNodes[1].innerHTML = temp[i].title;
-        //temp2.getElementsByName('date')[0].innerHTML = newsItems[0].createdAt;
-        document.getElementById('newsList').appendChild(temp2);
-        
+    for (i = 0; i < subArray.length; i++) {
+        console.log('Gate 2', subArray.length);
+
+        temp = temp.concat("<div class='container4' id='" + subArray[i].id + "'><img name='avatar' src='" + subArray[i].avatar + "' class='image1'><div class='container7'><div name='title' class='text1'>" + subArray[i].title + "</div><div name='createdAt' class='text2'>" + new Date(subArray[i].createdAt) + "</div></div></div>");
     }
-    
+    document.getElementById('newsList').innerHTML = temp;
+
     return;
 }
 
