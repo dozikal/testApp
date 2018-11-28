@@ -9,7 +9,7 @@
 <body>
     <div class='container1'>
         <div class='container2'>
-
+            <div class='button4' onclick='createNews()'>Create News</div>
         </div>
 
         <div class='container3' id='newsList'>
@@ -24,11 +24,11 @@
 
         </div>
 
-        <div class='container5'>
-            <div class='button1'>
+        <div id='navButtons' class='container5 '>
+            <div id='prevButton' onclick="refreshPage(-1)" class='button1' >
                 <div>Prev</div>
             </div>
-            <div class='button1'>
+            <div id='nextButton' onclick="refreshPage(1)" class='button2' >
                 <div>Next</div>
             </div>
         </div>
