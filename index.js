@@ -42,6 +42,7 @@ plusDivs = (n) => {
     showDivs(slideIndex += n);
 }
 
+
 showDivs = (n) => {
     var i;
     var x = document.getElementsByName('slide');
@@ -78,12 +79,13 @@ refreshPage = (goTo) => {
     var temp = '';
 
     for (i = 0; i < subArray.length; i++) {
-        temp = temp.concat("<div name='item' class='container4' id='" + subArray[i].id + "' onclick='newsReader(" + subArray[i].id + ")'><img name='avatar' src='" + subArray[i].avatar + "' class='image1'><div class='container7'><div name='title' class='text1'>" + subArray[i].title + "</div><div name='createdAt' class='text2'>" + new Date(subArray[i].createdAt) + "</div></div></div>");
+
+        temp = temp.concat("<div name='item' class='container4' id='" + subArray[i].id + "' onclick='newsReader(" + subArray[i].id + ")'><img name='avatar' src='" + subArray[i].avatar + "' class='image1'><div class='container7'><div name='title' class='text1'>" + subArray[i].title + "</div><div name='createdAt' class='text2'>" + new Date(subArray[i].createdAt).toUTCString() + "</div></div></div>");
     }
 
     var dispose = document.getElementsByName('item');
 
-    for(i = 0; i < dispose.length; i++){
+    for (i = 0; i < dispose.length; i++) {
         dispose[i].remove();
         i--;
     }
@@ -93,6 +95,7 @@ refreshPage = (goTo) => {
 
     return;
 }
+
 
 newsReader = (id) => {
     console.log('Reader Screen', id);
@@ -120,6 +123,13 @@ newsReader = (id) => {
     xhttp.open("GET", newsItems.filter((a) => findObject(a))[0].url, true); // true for asynchronous
     xhttp.send(null);
     */
+}
+
+
+resizeIFrameToFitContent = (iFrame) => {
+
+    iFrame.width = iFrame.contentWindow.document.body.scrollWidth;
+    iFrame.height = iFrame.contentWindow.document.body.scrollHeight;
 }
 
 
@@ -167,8 +177,14 @@ publishArticle = () => {
 
 
 addComment = () => {
-    document.getElementById('commentBox').innerHTML += "<div class='container13'>" + document.getElementById('myComment').value + "</div>";
+    var id = Date.now();
+    document.getElementById('commentBox').innerHTML += "<div id='" + id + "' style='position: relative'><div class='container13'>" + document.getElementById('myComment').value + "</div><div class='button8 but' onclick='deleteComment("+ id +")'>x</div></div>";
     document.getElementById('myComment').value = '';
+}
+
+
+deleteComment = (x) => {
+    document.getElementById(x).remove();
 }
 
 

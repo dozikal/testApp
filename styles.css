@@ -65,7 +65,7 @@ html, body{
     left: 0;
     display: flex;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .container7{
@@ -93,6 +93,9 @@ html, body{
     height: 200px;
     border-radius: 10px;
     margin: 10px;
+    border-color: orange;
+    border-style: solid;
+    border-width: 1px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.30);
 }
 
@@ -103,11 +106,12 @@ html, body{
 .container12{
     min-width: 400px;
     max-width: 600px;
+    height: 100%;
     background-color: white;
     border-radius: 20px;
     justify-content: center;
     padding: 10px;
-    margin-top: 10px;
+    margin-left: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.30);
 }
 
@@ -132,6 +136,9 @@ html, body{
     justify-content: center;
     align-items: center;
     padding: 40px 0px 40px 0px;
+    border-color: orange;
+    border-style: solid;
+    border-width: 1px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.30);
 }
 
@@ -207,7 +214,7 @@ html, body{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10;
+    border-radius: 10px;
 }
 
 .button1{
@@ -279,7 +286,7 @@ html, body{
 .button5{
     width: 45px;
     height: 30px;
-    background-color: black;
+    background-color: orange;
     border-color: white;
     border-width: 1px;
     border-style: solid;
@@ -293,7 +300,7 @@ html, body{
 .button6{
     width: 45px;
     height: 30px;
-    background-color: black;
+    background-color: orange;
     border-color: white;
     border-width: 1px;
     border-style: solid;
@@ -304,15 +311,42 @@ html, body{
     opacity: 0.5;
 }
 
+.button7{
+    border-radius: 20px;
+    background-color: orange;
+    border: none;
+    font-weight: bold;
+    padding: 0px 30px 0px 30px;
+    height: 40px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.30);
+}
+
+.button8{
+    background-color: orange;
+    border-radius: 20px;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: calc(50% - 10px);
+    right: 5px;
+    font-weight: bold;
+    opacity: 0.5;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.30);
+    text-align: center;
+}
+
 .but:hover{
     opacity: 1;
+    cursor: pointer;
     box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.60);
 }
 
 .input1{
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.30);
-    border: none;
+    border-style: solid;
+    border-width: 1px;
+    border-color: orange;
     height: 30px;
     padding: 0px 5px 0px 5px;
 }

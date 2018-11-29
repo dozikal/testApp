@@ -41,24 +41,26 @@
                     <label for='articleTitle'>News Id: </label>
                     <input class='input1' id='articleId' type='number' placeholder='article id' required><br>
 
-                    <input type='submit' value='Publish'>
+                    <input class='button7 but' type='submit' value='Publish'>
                 </form>
                 <div class='button3 but' onclick='refreshPage(0)'>Back</div>
             </div>
         </div>
 
         <div id='newsView' class='container6 hidden'>
-            <iframe id='newsFrame' frameborder='0' width='100%' src=''></iframe>
+            <iframe id='newsFrame' frameborder='0' width='100%' height='600px' src=''></iframe>
 
             <div class='container12'>
                 <div id='commentBox' class='container16'>
-                    <div class='container13'>This is a comment</div>
+                    <div id='44665577' style='position: relative'>
+                        <div class='container13'>This is a comment. This user cannot delete it because this user did not create it</div>
+                    </div>
                 </div>
 
 
                 <form id='articleForm' action='#' style='width: 100%' onsubmit='addComment(); return false' method='post'>
                     <textarea id='myComment' class='input2' type='text' placeholder='Type comment' required></textarea><br>
-                    <input type='submit' value='Post Comment'>
+                    <input class='button7 but' type='submit' value='Post Comment'>
                 </form>
             </div>
 
