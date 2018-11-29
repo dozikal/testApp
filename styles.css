@@ -6,30 +6,42 @@ html, body{
     background-color: aqua;
     width: 100%;
     height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .container2{
     height: 50px;
-    width: 100%;
+    width: calc(100% - 20px);
     background-color: grey;
+    justify-content: flex-end;
+    align-items: center;
+    display: flex;
+    padding: 0px 10px 0px 10px;
 }
 
 .container3{
-    width: calc(100% - 20px);
+    width: calc(100% - 10px);
     height: calc(100% - 70px);
-    background-color: pink;
-    padding: 10px;
+    background-color: white;
+    padding: 5px;
     display: flex;
     flex-wrap: wrap;
 }
 
 .container4{
     height: calc(50% - 10px);
-    width: calc(20% - 10px);
-    min-width: 180px;
+    min-width: 250px;
+    max-width: 350px;
     margin: 5px;
     background-color: lime;
     position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.30);
+    display: flex;
+    flex: 1;
+}
+.container4:hover{
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.60);
 }
 
 .container5{
@@ -46,7 +58,14 @@ html, body{
 
 .container6{
     width: 100%;
+    min-height: 100%;
     background-color: darkcyan;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .container7{
@@ -70,11 +89,82 @@ html, body{
 }
 
 .container10{
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 200px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.30);
+}
+
+.container11{
+
+}
+
+.container12{
+    min-width: 400px;
+    max-width: 600px;
+    background-color: white;
+    border-radius: 20px;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.30);
+}
+
+.container13{
+    min-width: 300px;
+    min-height: 30px;
+    border-radius: 15px;
+    background-color: lightgray;
+    line-height: 30px;
+    padding: 0px 10px 0px 10px;
+    margin: 5px 0px 5px 0px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.30);
+}
+
+.container14{
+    max-width: 400px;
+    min-width: 350px;
+    height: 700px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0px 40px 0px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.30);
+}
+
+.container15{
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.container16{
+    margin: 10px 0px 25px 0px;
+}
+
+.container17{
+    height: calc(50% - 10px);
+    min-width: 400px;
+    max-width: 400px;
+    margin: 5px;
+    background-color: lime;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.30);
+    display: flex;
+    flex: 1;
     border-width: 2px;
+    border-color: orange;
     border-style: solid;
-    border-color: red;
 }
 
 .text1{
@@ -94,6 +184,19 @@ html, body{
     text-shadow: 2px 2px 5px black;
 }
 
+.text3{
+    font-size: 25px;
+    font-weight: 700;
+    color: white;
+    line-height: 20px;
+    text-shadow: 2px 2px 5px black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px;
+    text-decoration-line: underline overline;
+}
+
 .image1{
     width: 100%;
     height: 100%;
@@ -104,6 +207,7 @@ html, body{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 10;
 }
 
 .button1{
@@ -119,6 +223,8 @@ html, body{
     margin-right: 1px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+    opacity: 0.75;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.30);
 }
 
 .button2{
@@ -134,6 +240,8 @@ html, body{
     margin-left: 1px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+    opacity: 0.75;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.30);
 }
 
 .button3{
@@ -148,8 +256,9 @@ html, body{
     background-color: orange;
     border-radius: 20px;
     position: fixed;
-    top: 10px;
-    left: 10px;
+    top: 5px;
+    left: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.30);
 }
 
 .button4{
@@ -157,16 +266,62 @@ html, body{
     line-height: 40px;
     font-weight: 900;
     height: 40px;
+    width: 150px;
     padding: 0px 10px 0px 10px;
     text-align: center;
     justify-content: center;
     align-items: center;
     background-color: orange;
     border-radius: 20px;
-    position: fixed;
-    top: 10px;
-    left: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.30);
 }
+
+.button5{
+    width: 45px;
+    height: 30px;
+    background-color: black;
+    border-color: white;
+    border-width: 1px;
+    border-style: solid;
+    position: absolute;
+    top: calc(50% - 15px);
+    left: 0;
+    color: white;
+    opacity: 0.5;
+}
+
+.button6{
+    width: 45px;
+    height: 30px;
+    background-color: black;
+    border-color: white;
+    border-width: 1px;
+    border-style: solid;
+    position: absolute;
+    top: calc(50% - 15px);
+    right: 0;
+    color: white;
+    opacity: 0.5;
+}
+
+.but:hover{
+    opacity: 1;
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.60);
+}
+
+.input1{
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.30);
+    border: none;
+    height: 30px;
+    padding: 0px 5px 0px 5px;
+}
+
+.input2{
+    width: 100%;
+    height: 100px;
+}
+
 
 .hidden{
     display: none;

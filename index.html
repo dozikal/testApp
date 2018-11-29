@@ -9,26 +9,68 @@
 <body>
     <div class='container1'>
         <div class='container2'>
-            <div class='button4' onclick='createNews()'>Create News</div>
+            <div id='createNewsButton' class='button4 but' onclick='createNews()'>Create News</div>
         </div>
 
         <div class='container3' id='newsList'>
+            <div id='imageSlider' class='container17'>
+                <div class='text3'>The news in Pictures</div>
+                <button class="button5 but" onclick="plusDivs(-1)">&#10094;</button>
+                <button class="button6 but" onclick="plusDivs(1)">&#10095;</button>
+            </div>
+        </div>
 
-            <div class='container4 hidden' id='listItemTemplate'>
-                <img name='avatar' src='https://s3.amazonaws.com/uifaces/faces/twitter/scott_riley/128.jpg' class='image1'>
-                <div class='container7'>
-                    <div name='caption' class='text1'>This is the caption of the news.</div>
-                    <div name='date' class='text2'>25th Oct 2018</div>
+        <div id='createNewsContainer' class='container15 hidden'>
+            <div class='container14'>
+                <form id='articleForm' action='#' style='display: flex; justify-content: center; flex-direction: column'
+                    onsubmit='publishArticle(); return false' method='post'>
+                    <label for='articleTitle'>Article Title: </label>
+                    <input class='input1' id='articleTitle' name='articleTitle' type='text' placeholder='Article Title'
+                        required><br>
+
+                    <label>Avatar: </label>
+                    <input class='input1' type='file' onchange='selectImage()' required>
+                    <div class='container10'><img id='articleImage' class='image2' src='https://css-tricks.com/wp-content/uploads/2015/11/drag-drop-upload-6.gif'></div>
+
+                    <label for='articleTitle'>Author: </label>
+                    <input class='input1' id='articleAuthor' type='text' placeholder='Author' required><br>
+
+                    <label for='articleTitle'>News URL: </label>
+                    <input class='input1' id='articleUrl' type='url' placeholder='article url' required><br>
+
+                    <label for='articleTitle'>News Id: </label>
+                    <input class='input1' id='articleId' type='number' placeholder='article id' required><br>
+
+                    <input type='submit' value='Publish'>
+                </form>
+                <div class='button3 but' onclick='refreshPage(0)'>Back</div>
+            </div>
+        </div>
+
+        <div id='newsView' class='container6 hidden'>
+            <iframe id='newsFrame' frameborder='0' width='100%' src=''></iframe>
+
+            <div class='container12'>
+                <div id='commentBox' class='container16'>
+                    <div class='container13'>This is a comment</div>
                 </div>
+
+
+                <form id='articleForm' action='#' style='width: 100%' onsubmit='addComment(); return false' method='post'>
+                    <textarea id='myComment' class='input2' type='text' placeholder='Type comment' required></textarea><br>
+                    <input type='submit' value='Post Comment'>
+                </form>
             </div>
 
+
+            <div class='button3 but' onclick='refreshPage(0)'>Back</div>
         </div>
 
         <div id='navButtons' class='container5 '>
-            <div id='prevButton' onclick="refreshPage(-1)" class='button1' >
+            <div id='prevButton' onclick="refreshPage(-1)" class='button1 but'>
                 <div>Prev</div>
             </div>
-            <div id='nextButton' onclick="refreshPage(1)" class='button2' >
+            <div id='nextButton' onclick="refreshPage(1)" class='button2 but'>
                 <div>Next</div>
             </div>
         </div>
