@@ -1,6 +1,6 @@
 # testApp
 
-<p>This is a simple task that was used for a job evaluation.</p>
+<p>*For Evaluation.*</p>
 <p>The details of the task are below:</p>
 
 <article class="markdown-body entry-content" itemprop="text">
